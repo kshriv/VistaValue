@@ -15,7 +15,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupBackground()
-        setupCoin()
     }
     
     func setupBackground(){
@@ -28,6 +27,7 @@ class ViewController: UIViewController {
         imageView.center = view.center
         view.addSubview(imageView)
         self.view.sendSubviewToBack(imageView)
+        setupCoin()
     }
 
     func setupCoin() {
