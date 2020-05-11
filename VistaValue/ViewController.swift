@@ -14,13 +14,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        assignbackground()
+        setupBackground()
         for _ in 0...10 {
             setupCoin()
         }
     }
     
-    func assignbackground(){
+    func setupBackground(){
         let background = UIImage(named: "gradient")
 
         var imageView : UIImageView!
