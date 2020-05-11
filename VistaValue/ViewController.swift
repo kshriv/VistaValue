@@ -15,16 +15,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupBackground()
-        for _ in 0...10 {
-            setupCoin()
-        }
+        setupCoin()
     }
     
     func setupBackground(){
         let background = UIImage(named: "gradient")
-
         var imageView : UIImageView!
-        imageView = UIImageView(frame: view.bounds)
+        imageView = UIImageView(frame: self.view.bounds)
         imageView.contentMode =  UIView.ContentMode.scaleAspectFill
         imageView.clipsToBounds = true
         imageView.image = background
@@ -41,7 +38,7 @@ class ViewController: UIViewController {
         image.frame = CGRect(x: 0.5 * (self.mainView.frame.width / 10) + (0 * (self.mainView.frame.width / 10)), y: -200, width: (self.mainView.frame.width / 10), height: (self.mainView.frame.width / 10))
         self.view.addSubview(image)
         
-        UIView.animate(withDuration: 5, delay: 0, options: [.repeat], animations: {
+        UIView.animate(withDuration: 5, delay: 2, options: [.repeat, .curveEaseIn], animations: {
             image.frame = CGRect(x: 0.5 * (self.view.frame.width / 10) + (0 * (self.view.frame.width / 10)), y: self.view.frame.midY * 2.2, width: (self.view.frame.width / 10), height: (self.view.frame.width / 10))
         }, completion: nil)
         
@@ -49,11 +46,11 @@ class ViewController: UIViewController {
         image = UIImageView()
         image.tintColor = UIColor.blue
         image.backgroundColor = UIColor.blue
-        image.frame = CGRect(x: 0.5 * (self.mainView.frame.width / 10) + (2 * (self.mainView.frame.width / 10)), y: self.mainView.frame.height + 200, width: (self.mainView.frame.width / 10), height: (self.mainView.frame.width / 10))
+        image.frame = CGRect(x: 0.5 * (self.mainView.frame.width / 10) + (2 * (self.mainView.frame.width / 10)), y: -200, width: (self.mainView.frame.width / 10), height: (self.mainView.frame.width / 10))
         self.view.addSubview(image)
         
-        UIView.animate(withDuration: 5, delay: 0, options: [.repeat], animations: {
-            image.frame = CGRect(x:  0.5 * (self.mainView.frame.width / 10) + (2 * (self.mainView.frame.width / 10)), y: -200, width: (self.mainView.frame.width / 10), height: (self.mainView.frame.width / 10))
+        UIView.animate(withDuration: 5, delay: 1, options: [.repeat, .curveEaseIn], animations: {
+            image.frame = CGRect(x:  0.5 * (self.mainView.frame.width / 10) + (2 * (self.mainView.frame.width / 10)), y: self.view.frame.midY * 2.2, width: (self.mainView.frame.width / 10), height: (self.mainView.frame.width / 10))
         }, completion: nil)
         
         //MARK: -third
@@ -63,7 +60,7 @@ class ViewController: UIViewController {
         image.frame = CGRect(x: 0.5 * (self.mainView.frame.width / 10) + (4 * (self.mainView.frame.width / 10)), y: -200, width: (self.mainView.frame.width / 10), height: (self.mainView.frame.width / 10))
         self.mainView.addSubview(image)
 
-        UIView.animate(withDuration: 5, delay: 0, options: [.repeat], animations: {
+        UIView.animate(withDuration: 5, delay: 3, options: [.repeat, .curveEaseIn], animations: {
             image.frame = CGRect(x:  0.5 * (self.view.frame.width / 10) + (4 * (self.view.frame.width / 10)), y: self.view.frame.midY * 2.2, width: (self.view.frame.width / 10), height: (self.view.frame.width / 10))
         }, completion: nil)
         
@@ -71,11 +68,11 @@ class ViewController: UIViewController {
        image = UIImageView()
        image.tintColor = UIColor.blue
        image.backgroundColor = UIColor.blue
-        image.frame = CGRect(x: 0.5 * (self.mainView.frame.width / 10) + (6 * (self.mainView.frame.width / 10)), y: self.mainView.frame.height + 200, width: (self.mainView.frame.width / 10), height: (self.mainView.frame.width / 10))
+        image.frame = CGRect(x: 0.5 * (self.mainView.frame.width / 10) + (6 * (self.mainView.frame.width / 10)), y: -200, width: (self.mainView.frame.width / 10), height: (self.mainView.frame.width / 10))
        self.view.addSubview(image)
        
-       UIView.animate(withDuration: 5, delay: 0, options: [.repeat], animations: {
-           image.frame = CGRect(x:  0.5 * (self.view.frame.width / 10) + (6 * (self.view.frame.width / 10)), y: -200, width: (self.view.frame.width / 10), height: (self.view.frame.width / 10))
+        UIView.animate(withDuration: 5, delay: 0.5, options: [.repeat, .curveEaseIn], animations: {
+           image.frame = CGRect(x:  0.5 * (self.view.frame.width / 10) + (6 * (self.view.frame.width / 10)), y: self.view.frame.midY * 2.2 , width: (self.view.frame.width / 10), height: (self.view.frame.width / 10))
        }, completion: nil)
         
         //MARK: -fifth
