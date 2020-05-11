@@ -33,8 +33,7 @@ class ViewController: UIViewController {
     func setupCoin() {
         //MARK: -first
         var image = UIImageView()
-        image.tintColor = UIColor.blue
-        image.backgroundColor = UIColor.blue
+        image.image = UIImage(named: "coin")
         image.frame = CGRect(x: 0.5 * (self.mainView.frame.width / 10) + (0 * (self.mainView.frame.width / 10)), y: -200, width: (self.mainView.frame.width / 10), height: (self.mainView.frame.width / 10))
         self.view.addSubview(image)
         
@@ -44,8 +43,7 @@ class ViewController: UIViewController {
         
         //MARK: -second
         image = UIImageView()
-        image.tintColor = UIColor.blue
-        image.backgroundColor = UIColor.blue
+        image.image = UIImage(named: "coin")
         image.frame = CGRect(x: 0.5 * (self.mainView.frame.width / 10) + (2 * (self.mainView.frame.width / 10)), y: -200, width: (self.mainView.frame.width / 10), height: (self.mainView.frame.width / 10))
         self.view.addSubview(image)
         
@@ -55,8 +53,7 @@ class ViewController: UIViewController {
         
         //MARK: -third
         image = UIImageView()
-        image.tintColor = UIColor.blue
-        image.backgroundColor = UIColor.blue
+        image.image = UIImage(named: "coin")
         image.frame = CGRect(x: 0.5 * (self.mainView.frame.width / 10) + (4 * (self.mainView.frame.width / 10)), y: -200, width: (self.mainView.frame.width / 10), height: (self.mainView.frame.width / 10))
         self.mainView.addSubview(image)
 
@@ -66,8 +63,7 @@ class ViewController: UIViewController {
         
         //MARK: -fourth
        image = UIImageView()
-       image.tintColor = UIColor.blue
-       image.backgroundColor = UIColor.blue
+       image.image = UIImage(named: "coin")
         image.frame = CGRect(x: 0.5 * (self.mainView.frame.width / 10) + (6 * (self.mainView.frame.width / 10)), y: -200, width: (self.mainView.frame.width / 10), height: (self.mainView.frame.width / 10))
        self.view.addSubview(image)
        
@@ -77,8 +73,7 @@ class ViewController: UIViewController {
         
         //MARK: -fifth
         image = UIImageView()
-        image.tintColor = UIColor.blue
-        image.backgroundColor = UIColor.blue
+        image.image = UIImage(named: "coin")
         image.frame = CGRect(x: 0.5 * (self.mainView.frame.width / 10) + (8 * (self.mainView.frame.width / 10)), y: -200, width: (self.mainView.frame.width / 10), height: (self.mainView.frame.width / 10))
         self.view.addSubview(image)
 
