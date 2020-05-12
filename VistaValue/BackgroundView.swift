@@ -139,14 +139,12 @@ class BackgroundView: UIView {
     
     func setupTitle() {
         var title = UILabel(frame: CGRect(x: self.frame.midX , y: self.frame.midY, width: self.frame.width / 2, height: self.frame.height / 10))
-//        var titleSize = CGSize(width: self.frame.width / 2, height: self.frame.height / 10)
-//        var titleCoordinate = CGPoint(x: self.frame.midX - (title.frame.width / 2), y: self.frame.height / 10)
         title.text = "Vista Value"
+        title.font = UIFont(name: "DINCondensed-Bold", size: UIFont.labelFontSize)
         title.textColor = UIColor.white
         title.center = CGPoint(x: self.frame.midX, y: self.frame.height / 8)
         title.textAlignment = .center
-        title.font = title.font.withSize(40)
-//        title = UILabel(frame: CGRect(origin: titleCoordinate, size: titleSize))
+        title.font = title.font.withSize(50)
         addSubview(title)
         self.bringSubviewToFront(title)
     }
