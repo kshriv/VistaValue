@@ -145,7 +145,9 @@ class BackgroundView: UIView {
         title.center = CGPoint(x: self.frame.midX, y: self.frame.height / 8)
         title.textAlignment = .center
         title.font = title.font.withSize(60)
-        title.adjustsFontForContentSizeCategory = true
+        title.adjustsFontSizeToFitWidth = true
+        title.minimumScaleFactor = 0.25
+        title.numberOfLines = 0
         addSubview(title)
         self.bringSubviewToFront(title)
     }
