@@ -145,6 +145,7 @@ class BackgroundView: UIView {
         title.textColor = UIColor.white
         title.center = CGPoint(x: self.frame.midX, y: self.frame.height / 8)
         title.textAlignment = .center
+        title.font = title.font.withSize(40)
 //        title = UILabel(frame: CGRect(origin: titleCoordinate, size: titleSize))
         addSubview(title)
         self.bringSubviewToFront(title)
