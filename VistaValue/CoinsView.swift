@@ -121,8 +121,6 @@ class CoinsView: UIView {
         UIView.animate(withDuration: 5, delay: 3.2, options: [.repeat], animations: {
                 image.frame = CGRect(x:  0.5 * (xConst) + (8 * (xConst)), y: self.frame.midY * 2, width: (xConst), height: (xConst))
             }, completion: nil)
-        
-    
     }
 }
 

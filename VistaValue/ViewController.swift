@@ -20,7 +20,7 @@ class ViewController: UIViewController {
 
     }
     
-    func setupBackground(){
+    func setupBackground() {
         let background = UIImage(named: "gradient")
         var imageView : UIImageView!
         imageView = UIImageView(frame: self.view.bounds)
