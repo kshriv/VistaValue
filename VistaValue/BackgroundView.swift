@@ -8,11 +8,13 @@
 
 import UIKit
 
-class CoinsView: UIView {
+class BackgroundView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupCoin()
+        setupTitle()
+        setupBackground()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -68,7 +70,7 @@ class CoinsView: UIView {
         image.frame = CGRect(x: 0.5 * (xConst) + (8 * (xConst)), y: -200, width: (xConst), height: (xConst))
         self.addSubview(image)
 
-        UIView.animate(withDuration: 5, delay: 0, options: [.repeat], animations: {
+        UIView.animate(withDuration: 5, delay: 0, options: [.repeat, .curveEaseIn], animations: {
             image.frame = CGRect(x:  0.5 * (xConst) + (8 * (xConst)), y: self.frame.midY * 2, width: (xConst), height: (xConst))
         }, completion: nil)
         
@@ -118,9 +120,34 @@ class CoinsView: UIView {
             image.frame = CGRect(x: 0.5 * (xConst) + (8 * (xConst)), y: -200, width: (xConst), height: (xConst))
             self.addSubview(image)
 
-        UIView.animate(withDuration: 5, delay: 3.2, options: [.repeat], animations: {
+        UIView.animate(withDuration: 5, delay: 3.2, options: [.repeat, .curveEaseIn], animations: {
                 image.frame = CGRect(x:  0.5 * (xConst) + (8 * (xConst)), y: self.frame.midY * 2, width: (xConst), height: (xConst))
             }, completion: nil)
+    }
+    
+    func setupBackground() {
+        let background = UIImage(named: "gradient")
+        var imageView : UIImageView!
+        imageView = UIImageView(frame: self.bounds)
+        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = background
+        imageView.center = center
+        addSubview(imageView)
+        self.sendSubviewToBack(imageView)
+    }
+    
+    func setupTitle() {
+        var title = UILabel(frame: CGRect(x: self.frame.midX , y: self.frame.midY, width: self.frame.width / 2, height: self.frame.height / 10))
+//        var titleSize = CGSize(width: self.frame.width / 2, height: self.frame.height / 10)
+//        var titleCoordinate = CGPoint(x: self.frame.midX - (title.frame.width / 2), y: self.frame.height / 10)
+        title.text = "Vista Value"
+        title.textColor = UIColor.white
+        title.center = CGPoint(x: self.frame.midX, y: self.frame.height / 8)
+        title.textAlignment = .center
+//        title = UILabel(frame: CGRect(origin: titleCoordinate, size: titleSize))
+        addSubview(title)
+        self.bringSubviewToFront(title)
     }
 }
 
