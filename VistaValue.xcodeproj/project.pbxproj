@@ -16,7 +16,6 @@
 		6F825B0324690EFA00EE535C /* VistaValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F825B0224690EFA00EE535C /* VistaValueTests.swift */; };
 		6F825B0E24690EFA00EE535C /* VistaValueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F825B0D24690EFA00EE535C /* VistaValueUITests.swift */; };
 		6FCA617B246A400E00C7A09C /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FCA617A246A400E00C7A09C /* BackgroundView.swift */; };
-		6FCA617D246A58FA00C7A09C /* Bariol_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6FCA617C246A58FA00C7A09C /* Bariol_Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +51,6 @@
 		6F825B0D24690EFA00EE535C /* VistaValueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistaValueUITests.swift; sourceTree = "<group>"; };
 		6F825B0F24690EFA00EE535C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FCA617A246A400E00C7A09C /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
-		6FCA617C246A58FA00C7A09C /* Bariol_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Bariol_Regular.otf; path = "../../../Downloads/Bariol-Regular&Italic/Desktop/Bariol_Regular.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +101,6 @@
 		6F825AEA24690EF900EE535C /* VistaValue */ = {
 			isa = PBXGroup;
 			children = (
-				6FCA617C246A58FA00C7A09C /* Bariol_Regular.otf */,
 				6F825AEB24690EF900EE535C /* AppDelegate.swift */,
 				6F825AED24690EF900EE535C /* SceneDelegate.swift */,
 				6F825AEF24690EF900EE535C /* ViewController.swift */,
@@ -241,7 +238,6 @@
 				6F825AF824690EFA00EE535C /* LaunchScreen.storyboard in Resources */,
 				6F825AF524690EFA00EE535C /* Assets.xcassets in Resources */,
 				6F825AF324690EF900EE535C /* Main.storyboard in Resources */,
-				6FCA617D246A58FA00C7A09C /* Bariol_Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
