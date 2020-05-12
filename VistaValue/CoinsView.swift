@@ -22,13 +22,14 @@ class CoinsView: UIView {
     func setupCoin() {
         //MARK: -first
         let xConst = self.frame.width / 10
+        
         var image = UIImageView()
         image.image = UIImage(named: "coin")
         image.frame = CGRect(x: 0.5 * xConst, y: -200, width: (xConst), height: (xConst))
         self.addSubview(image)
         
         UIView.animate(withDuration: 5, delay: 2, options: [.repeat, .curveEaseIn], animations: {
-            image.frame = CGRect(x: 0.5 * xConst, y: self.frame.midY * 2.2, width: (xConst), height: (xConst))
+            image.frame = CGRect(x: 0.5 * xConst, y: self.frame.midY * 2, width: (xConst), height: (xConst))
         }, completion: nil)
         
         //MARK: -second
@@ -38,7 +39,7 @@ class CoinsView: UIView {
         self.addSubview(image)
         
         UIView.animate(withDuration: 5, delay: 1, options: [.repeat, .curveEaseIn], animations: {
-            image.frame = CGRect(x:  0.5 * xConst + (2 * (xConst)), y: self.frame.midY * 2.2, width: (xConst), height: (xConst))
+            image.frame = CGRect(x:  0.5 * xConst + (2 * (xConst)), y: self.frame.midY * 2, width: (xConst), height: (xConst))
         }, completion: nil)
         
         //MARK: -third
@@ -48,7 +49,7 @@ class CoinsView: UIView {
         self.addSubview(image)
 
         UIView.animate(withDuration: 5, delay: 3, options: [.repeat, .curveEaseIn], animations: {
-            image.frame = CGRect(x:  0.5 * (xConst) + (4 * (xConst)), y: self.frame.midY * 2.2, width: (xConst), height: (xConst))
+            image.frame = CGRect(x:  0.5 * (xConst) + (4 * (xConst)), y: self.frame.midY * 2, width: (xConst), height: (xConst))
         }, completion: nil)
         
         //MARK: -fourth
@@ -58,7 +59,7 @@ class CoinsView: UIView {
        self.addSubview(image)
        
         UIView.animate(withDuration: 5, delay: 0.5, options: [.repeat, .curveEaseIn], animations: {
-           image.frame = CGRect(x:  0.5 * (xConst) + (6 * (xConst)), y: self.frame.midY * 2.2 , width: (xConst), height: (xConst))
+           image.frame = CGRect(x:  0.5 * (xConst) + (6 * (xConst)), y: self.frame.midY * 2, width: (xConst), height: (xConst))
        }, completion: nil)
         
         //MARK: -fifth
@@ -68,7 +69,7 @@ class CoinsView: UIView {
         self.addSubview(image)
 
         UIView.animate(withDuration: 5, delay: 0, options: [.repeat], animations: {
-            image.frame = CGRect(x:  0.5 * (xConst) + (8 * (xConst)), y: self.frame.midY * 2.2, width: (xConst), height: (xConst))
+            image.frame = CGRect(x:  0.5 * (xConst) + (8 * (xConst)), y: self.frame.midY * 2, width: (xConst), height: (xConst))
         }, completion: nil)
         
         //MARK: -first2
@@ -78,7 +79,7 @@ class CoinsView: UIView {
             self.addSubview(image)
             
         UIView.animate(withDuration: 5, delay: 3.8, options: [.repeat, .curveEaseIn], animations: {
-                image.frame = CGRect(x: 0.5 * (xConst) + (0 * (xConst)), y: self.frame.midY * 2.2, width: (xConst), height: (xConst))
+                image.frame = CGRect(x: 0.5 * (xConst) + (0 * (xConst)), y: self.frame.midY * 2, width: (xConst), height: (xConst))
             }, completion: nil)
             
             //MARK: -second2
@@ -88,7 +89,7 @@ class CoinsView: UIView {
             self.addSubview(image)
             
         UIView.animate(withDuration: 5, delay: 2.2, options: [.repeat, .curveEaseIn], animations: {
-                image.frame = CGRect(x:  0.5 * (xConst) + (2 * (xConst)), y: self.frame.midY * 2.2, width: (xConst), height: (xConst))
+                image.frame = CGRect(x:  0.5 * (xConst) + (2 * (xConst)), y: self.frame.midY * 2, width: (xConst), height: (xConst))
             }, completion: nil)
             
             //MARK: -third2
@@ -98,7 +99,7 @@ class CoinsView: UIView {
             self.addSubview(image)
 
         UIView.animate(withDuration: 5, delay: 4.5, options: [.repeat, .curveEaseIn], animations: {
-                image.frame = CGRect(x:  0.5 * (xConst) + (4 * (xConst)), y: self.frame.midY * 2.2, width: (xConst), height: (xConst))
+                image.frame = CGRect(x:  0.5 * (xConst) + (4 * (xConst)), y: self.frame.midY * 2, width: (xConst), height: (xConst))
             }, completion: nil)
             
             //MARK: -fourth2
@@ -108,7 +109,7 @@ class CoinsView: UIView {
            self.addSubview(image)
            
         UIView.animate(withDuration: 5, delay: 1.4, options: [.repeat, .curveEaseIn], animations: {
-               image.frame = CGRect(x:  0.5 * (xConst) + (6 * (xConst)), y: self.frame.midY * 2.2 , width: (xConst), height: (xConst))
+               image.frame = CGRect(x:  0.5 * (xConst) + (6 * (xConst)), y: self.frame.midY * 2 , width: (xConst), height: (xConst))
            }, completion: nil)
             
             //MARK: -fifth2
@@ -118,7 +119,7 @@ class CoinsView: UIView {
             self.addSubview(image)
 
         UIView.animate(withDuration: 5, delay: 3.2, options: [.repeat], animations: {
-                image.frame = CGRect(x:  0.5 * (xConst / 10) + (8 * (xConst)), y: self.frame.midY * 2.2, width: (xConst), height: (xConst))
+                image.frame = CGRect(x:  0.5 * (xConst) + (8 * (xConst)), y: self.frame.midY * 2, width: (xConst), height: (xConst))
             }, completion: nil)
         
     
