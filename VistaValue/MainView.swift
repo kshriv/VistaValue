@@ -32,7 +32,7 @@ class MainView: UIView {
     
     private func setupTotal() {
         let totalLabel = UILabel(frame: CGRect(x: self.frame.midX , y: self.frame.midY, width: self.frame.width, height: self.frame.height / 8))
-        totalLabel.backgroundColor = UIColor.systemPink
+        totalLabel.backgroundColor = UIColorFromHex(rgbValue: 0x5A7DDE, alpha: 0.7)
         totalLabel.center = CGPoint(x: self.frame.midX, y: self.frame.height / 1.2)
         totalLabel.text = "Total Expenses:"
         totalLabel.textAlignment = .center
