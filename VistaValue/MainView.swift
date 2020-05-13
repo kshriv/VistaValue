@@ -115,9 +115,20 @@ class MainView: UIView {
     }
     
     func createAmountTextField() -> UITextField {
-        let amountTextField = UITextField(frame: CGRect(x: self.frame.midX, y: self.frame.midY, width: self.frame.width * (0.4), height: self.frame.height * (1/20)))
-        amountTextField.center = self.center
-        return amountTextField
+//        let amountTextField = UITextField(frame: CGRect(x: self.frame.midX, y: self.frame.midY, width: self.frame.width * (0.4), height: self.frame.height * (1/20)))
+//        amountTextField.center = self.center
+//        return amountTextField
+        let sampleTextField =  UITextField(frame: CGRect(x: 20, y: 100, width: 300, height: 40))
+        sampleTextField.placeholder = "Enter text here"
+        sampleTextField.font = UIFont.systemFont(ofSize: 15)
+        sampleTextField.borderStyle = UITextField.BorderStyle.roundedRect
+        sampleTextField.autocorrectionType = UITextAutocorrectionType.no
+        sampleTextField.keyboardType = UIKeyboardType.default
+        sampleTextField.returnKeyType = UIReturnKeyType.done
+        sampleTextField.clearButtonMode = UITextField.ViewMode.whileEditing
+        sampleTextField.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
+//        sampleTextField.delegate = self
+        return sampleTextField
     }
     
     func blurEffect() -> UIVisualEffectView {
