@@ -60,12 +60,13 @@ class MainView: UIView {
     
     private func createAddExpenseView() -> UIView {
         let view = createAddExpenseBackground()
+        view.addSubview(createAmountTextField())
         view.addSubview(createEnterButton(view: view))
         return view
     }
     
     private func createAddExpenseBackground() -> UIImageView {
-    let background = UIImage(named: "gradient2")
+        let background = UIImage(named: "gradient2")
         var imageView : UIImageView!
         imageView = UIImageView(frame: CGRect(x: self.frame.midX, y: self.frame.midY, width: self.frame.width * 0.80, height: self.frame.height * 0.85))
         imageView.contentMode =  UIView.ContentMode.scaleAspectFill
@@ -98,11 +99,16 @@ class MainView: UIView {
         UIView.animate(withDuration: 1, animations: {
             addExpenseButton.frame = CGRect(x: self.frame.midX + 100 , y: self.frame.midY, width: self.frame.width / 1.5, height: self.frame.height / 10)
             addExpenseButton.center = CGPoint(x: self.frame.midX, y: self.frame.height - (self.frame.height * 0.25))
-
         })
         return addExpenseButton
         
 //        return enterButton
+    }
+    
+    func createAmountTextField() -> UITextField {
+        let amountTextField = UITextField(frame: CGRect(x: self.frame.midX, y: self.frame.midY, width: self.frame.width * (0.4), height: self.frame.height * (1/20)))
+        amountTextField.center = self.center
+        return amountTextField
     }
     
     func blurEffect() -> UIVisualEffectView {
