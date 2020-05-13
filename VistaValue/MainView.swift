@@ -45,7 +45,7 @@ class MainView: UIView {
     }
     
 
-    func UIColorFromHex(rgbValue:UInt32, alpha:Double=1.0)-> UIColor {
+    func UIColorFromHex(rgbValue:UInt32, alpha:Double=1.0) -> UIColor {
         let red = CGFloat((rgbValue & 0xFF0000) >> 16) / 256.0
         let green = CGFloat((rgbValue & 0xFF00) >> 8) / 256.0
         let blue = CGFloat(rgbValue & 0xFF) / 256.0
@@ -55,7 +55,7 @@ class MainView: UIView {
 
     @objc private func handleAddExpenseButtonTapped() {
         addSubview(blurEffect())
-        
+
         let view = createAddExpenseView()
         view.frame = CGRect(x: self.frame.midX, y: 0, width: 0, height: 0)
         view.center = CGPoint(x: self.frame.midX, y: self.frame.height / 4)
@@ -79,7 +79,7 @@ class MainView: UIView {
         var imageView : UIImageView!
         imageView = UIImageView(frame: CGRect(x: self.frame.midX, y: self.frame.midY, width: self.frame.width * 0.80, height: self.frame.height * 0.85))
         imageView.contentMode =  UIView.ContentMode.scaleAspectFill
-        imageView.clipsToBounds = true
+//        imageView.clipsToBounds = false
         imageView.layer.cornerRadius = 9
         imageView.image = background
         imageView.center = center
@@ -88,37 +88,33 @@ class MainView: UIView {
     }
     
     private func createEnterButton(view: UIView) -> UIButton {
-//        let enterButton = UIButton(frame: CGRect(x: view.frame.midX , y: view.frame.midY, width: view.frame.width / 1.5, height: view.frame.height / 10))
-//        enterButton.setBackgroundImage(UIImage(named: "enter"), for: .normal)
-//        enterButton.center = CGPoint(x: view.frame.midX, y: view.frame.height / 4)
-        
-//        let enterButton = UIButton(frame: CGRect(x: view.frame.midX, y: view.frame.midY, width: view.frame.width / 1.5, height: view.frame.height / 10))
-////        enterButton.center = CGPoint(x: view.frame.midX, y: view.frame.midY * 0.87)
-//        enterButton.setBackgroundImage(UIImage(named: "enter"), for: .normal)
 
-//        addExpenseButton.center = CGPoint(x: self.frame.midX, y: self.frame.height / 4)
-//        addExpenseButton.imageRect(forContentRect: CGRect(x: self.frame.midX , y: self.frame.midY, width: self.frame.width / 2, height: self.frame.height / 10))
-//        addExpenseButton.addTarget(self, action: #selector(handleAddExpenseButtonTapped),for: [.touchUpInside])
+        let enterButton = UIButton()
+        enterButton.setBackgroundImage(UIImage(named: "enter"), for: .normal)
+       
+        enterButton.frame = CGRect(x: self.frame.midX, y: 0, width: 0, height: 0)
+        enterButton.center = CGPoint(x: self.frame.midX, y: self.frame.height / 4)
+
         
-        let addExpenseButton = UIButton(frame:  CGRect(x: self.frame.midX, y: 0, width: 0, height: 0))
-        addExpenseButton.setBackgroundImage(UIImage(named: "add-expense"), for: .normal)
-//        addExpenseButton.center = CGPoint(x: self.frame.midX, y: self.frame.height / 4)
-//        addExpenseButton.imageRect(forContentRect: CGRect(x: self.frame.midX , y: self.frame.midY, width: self.frame.width / 2, height: self.frame.height / 10))
+        print("MIDX : " + String(describing: enterButton.frame.midX))
+
+        UIView.animate(withDuration: 3, animations: {
+            enterButton.frame = CGRect(x: (view.frame.maxX - view.frame.minX) / 2 , y: 100, width: self.frame.width / 1.5, height: self.frame.height / 10)
+
+            enterButton.center = CGPoint(x: (view.frame.maxX - view.frame.minX) / 2, y: (11/13) * view.frame.maxY)
+        }, completion: nil)
         
-        UIView.animate(withDuration: 1, animations: {
-            addExpenseButton.frame = CGRect(x: self.frame.midX + 100 , y: self.frame.midY, width: self.frame.width / 1.5, height: self.frame.height / 10)
-            addExpenseButton.center = CGPoint(x: self.frame.midX, y: self.frame.height - (self.frame.height * 0.25))
-        })
-        return addExpenseButton
+        return enterButton
         
-//        return enterButton
+        
     }
     
     func createAmountTextField() -> UITextField {
 //        let amountTextField = UITextField(frame: CGRect(x: self.frame.midX, y: self.frame.midY, width: self.frame.width * (0.4), height: self.frame.height * (1/20)))
 //        amountTextField.center = self.center
 //        return amountTextField
-        let sampleTextField =  UITextField(frame: CGRect(x: 20, y: 100, width: 300, height: 40))
+        let width = (self.frame.width * (0.80))
+        let sampleTextField =  UITextField(frame: CGRect(x: self.frame.midX - width, y: 100, width: 300, height: 40))
         sampleTextField.placeholder = "Enter text here"
         sampleTextField.font = UIFont.systemFont(ofSize: 15)
         sampleTextField.borderStyle = UITextField.BorderStyle.roundedRect
