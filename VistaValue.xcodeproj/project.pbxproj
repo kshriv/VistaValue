@@ -17,6 +17,7 @@
 		6F825B0E24690EFA00EE535C /* VistaValueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F825B0D24690EFA00EE535C /* VistaValueUITests.swift */; };
 		6FCA617B246A400E00C7A09C /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FCA617A246A400E00C7A09C /* BackgroundView.swift */; };
 		6FEE5B4F246B9E0B00381133 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEE5B4E246B9E0B00381133 /* MainView.swift */; };
+		D57DAB6E246C8AFA00EB644B /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57DAB6D246C8AFA00EB644B /* AddExpenseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		6F825B0F24690EFA00EE535C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FCA617A246A400E00C7A09C /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		6FEE5B4E246B9E0B00381133 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		D57DAB6D246C8AFA00EB644B /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				6F825AF424690EFA00EE535C /* Assets.xcassets */,
 				6F825AF624690EFA00EE535C /* LaunchScreen.storyboard */,
 				6F825AF924690EFA00EE535C /* Info.plist */,
+				D57DAB6D246C8AFA00EB644B /* AddExpenseViewController.swift */,
 				6FCA617A246A400E00C7A09C /* BackgroundView.swift */,
 				6FEE5B4E246B9E0B00381133 /* MainView.swift */,
 			);
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F825AF024690EF900EE535C /* ViewController.swift in Sources */,
+				D57DAB6E246C8AFA00EB644B /* AddExpenseViewController.swift in Sources */,
 				6FCA617B246A400E00C7A09C /* BackgroundView.swift in Sources */,
 				6F825AEC24690EF900EE535C /* AppDelegate.swift in Sources */,
 				6FEE5B4F246B9E0B00381133 /* MainView.swift in Sources */,

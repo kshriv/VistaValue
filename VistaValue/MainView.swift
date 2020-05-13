@@ -60,7 +60,7 @@ class MainView: UIView {
         view.frame = CGRect(x: self.frame.midX, y: 0, width: 0, height: 0)
         view.center = CGPoint(x: self.frame.midX, y: self.frame.height / 4)
 
-        UIView.animate(withDuration: 0.5, animations: {
+        UIView.animate(withDuration: 0.3, animations: {
             let widthSubtract = (self.frame.width * 0.80) / 2
               view.frame = CGRect(x: self.frame.midX - widthSubtract, y: self.frame.midY, width: self.frame.width * 0.80, height: self.frame.height * 0.85)
             view.center = self.center
@@ -89,21 +89,11 @@ class MainView: UIView {
     
     private func createEnterButton(view: UIView) -> UIButton {
 
-        let enterButton = UIButton()
+        let enterButton = UIButton(frame:  CGRect(x: (view.frame.maxX - view.frame.minX) / 2 , y: 100, width: self.frame.width / 1.5, height: self.frame.height / 12))
+        enterButton.imageView?.contentMode = UIView.ContentMode.scaleAspectFit
+
         enterButton.setBackgroundImage(UIImage(named: "enter"), for: .normal)
-       
-        enterButton.frame = CGRect(x: self.frame.midX, y: 0, width: 0, height: 0)
-        enterButton.center = CGPoint(x: self.frame.midX, y: self.frame.height / 4)
-
-        
-        print("MIDX : " + String(describing: enterButton.frame.midX))
-
-        UIView.animate(withDuration: 3, animations: {
-            enterButton.frame = CGRect(x: (view.frame.maxX - view.frame.minX) / 2 , y: 100, width: self.frame.width / 1.5, height: self.frame.height / 10)
-
-            enterButton.center = CGPoint(x: (view.frame.maxX - view.frame.minX) / 2, y: (11/13) * view.frame.maxY)
-        }, completion: nil)
-        
+        enterButton.center = CGPoint(x: (view.frame.maxX - view.frame.minX) / 2, y: (11/13) * view.frame.maxY)
         return enterButton
         
         
@@ -114,8 +104,8 @@ class MainView: UIView {
 //        amountTextField.center = self.center
 //        return amountTextField
         let width = (self.frame.width * (0.80))
-        let sampleTextField =  UITextField(frame: CGRect(x: self.frame.midX - width, y: 100, width: 300, height: 40))
-        sampleTextField.placeholder = "Enter text here"
+        let sampleTextField =  UITextField(frame: CGRect(x: (super.frame.maxX - super.frame.minX) / 2, y: 100, width: 300, height: 40))
+        
         sampleTextField.font = UIFont.systemFont(ofSize: 15)
         sampleTextField.borderStyle = UITextField.BorderStyle.roundedRect
         sampleTextField.autocorrectionType = UITextAutocorrectionType.no
