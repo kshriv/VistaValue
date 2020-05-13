@@ -11,10 +11,12 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet var mainView: UIView!
     var backgroundView: BackgroundView!
+    var interactiveView: MainView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        setupMainView()
         setupBackgroundView()
     }
 }
@@ -25,6 +27,11 @@ extension ViewController {
     private func setupBackgroundView() {
         backgroundView = BackgroundView(frame: view.frame)
         view.insertSubview(backgroundView, at: 0)
+    }
+    
+    private func setupMainView() {
+        interactiveView = MainView(frame: view.frame)
+        view.insertSubview(interactiveView, at: 0)
     }
 }
 
